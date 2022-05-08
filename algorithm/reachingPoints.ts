@@ -3,7 +3,7 @@
  * @Date 2022-04-9
  * @see:https://leetcode-cn.com/problems/reaching-points/
  * @todo: 780. 到达终点
- * @description:给定四个整数 sx , sy ，tx 和 ty，如果通过一系列的转换可以从起点 (sx, sy) 到达终点 (tx, ty)，则返回 true，否则返回 false。
+ * @description:给定四个整数sx,sy，tx和ty，如果通过一系列的转换可以从起点(sx, sy)到达终点(tx, ty)，则返回 true，否则返回false。
  * 从点 (x, y) 可以转换到 (x, x+y)  或者 (x+y, y)。
  */
 

@@ -3,7 +3,7 @@
  * @description typeof
  * @Date 2022-05-08
  */
-// 类型  undefined null 
+// 类型  undefined null
 
 // ---------------------------------------------------------------
 // ? interface和 class中的typeof 的区别 typeof获取的是当前变量对应的类型 keyof获取的是实例对应的类型的属性名的联合
@@ -62,23 +62,23 @@ type numberType = typeof a // '1'
 /**
  * @desc: 对枚举成员使用typeof
  */
-enum user {
+enum users {
   admin = 'admin',
   user = 'user',
 }
 
-type userType = typeof user // ! {user: user.user, admin: user.admin} 注意 虽然user.admin的类型是string 但是user的类型是user.user 所以只能由user这个枚举类赋值
+type userType = typeof users // ! {user: user.user, admin: user.admin} 注意 虽然user.admin的类型是string 但是user的类型是user.user 所以只能由user这个枚举类赋值
 
-const obj: { admin: user.admin; user: user.user } = {
-  admin: user.admin,
-  user: user.user,
+const obj: { admin: users.admin; user: users.user } = {
+  admin: users.admin,
+  user: users.user,
 }
 const userTypeObj: userType = obj
 
 // TODO: 这里为解释:
-type c = typeof user
+type c = typeof users
 
-type isT = [{ admin: user.admin; user: user.user }] extends [c] ? true : false
+type isT = [{ admin: users.admin; user: users.user }] extends [c] ? true : false
 
 enum UserResponse {
   No = '0',
@@ -115,6 +115,7 @@ const arr23: arrKey = 'concat'
 
 // true
 type arrKey1 = [
+  // @ts-ignore
   | Symbol.iterator
   | 'length'
   | 'constructor'
@@ -168,9 +169,9 @@ type tupleType = typeof tuple // readonly  [number, string]
 const tuple1: tupleType = [2, '3']
 
 // 数组转元祖的操作: 数组后面加 as const
-const arr = [1, 2, 3] as const // readonly [1, 2, 3]
+const arrTemp = [1, 2, 3] as const // readonly [1, 2, 3]
 
-type as = typeof arr
+type as = typeof arrTemp
 
 const arr1: as = [1, 2, 3] // 类型只能是 [1,2,3]
 

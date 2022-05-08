@@ -1,4 +1,4 @@
-class RandomizedSet {
+export class RandomizedSet {
   constructor(private set: Set<number> = new Set()) {}
 
   insert(val: number): boolean {
@@ -20,7 +20,7 @@ class RandomizedSet {
   getRandom(): number {
     const radom = Number.parseInt(String(Math.random() * this.set.size))
     let i = 0
-    let entries: IterableIterator<number> = this.set.values()
+    const entries: IterableIterator<number> = this.set.values()
 
     while (i <= radom) {
       if (i === radom) {
@@ -40,4 +40,3 @@ class RandomizedSet {
  * var param_2 = obj.remove(val)
  * var param_3 = obj.getRandom()
  */
- 

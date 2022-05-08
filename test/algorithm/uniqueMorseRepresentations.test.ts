@@ -4,7 +4,6 @@ test('example', () => {
   expect(uniqueMorseRepresentations(['gin', 'zen', 'gig', 'msg'])).toBe(2)
 })
 
-
 test('example', () => {
   expect(uniqueMorseRepresentations(['a'])).toBe(1)
 })

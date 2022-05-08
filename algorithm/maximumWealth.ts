@@ -6,14 +6,17 @@
  */
 
 function maximumWealth(accounts: number[][]): number {
-  let ans = 0;
-  accounts.forEach(val => {
-    ans = Math.max(ans, val.reduce((pre, val) => {
-      pre += val
-      return pre
-    }, 0))
+  let ans = 0
+  accounts.forEach((val) => {
+    ans = Math.max(
+      ans,
+      val.reduce((pre, val) => {
+        pre += val
+        return pre
+      }, 0)
+    )
   })
-  return ans;
-};
+  return ans
+}
 
-export default maximumWealth;
+export default maximumWealth

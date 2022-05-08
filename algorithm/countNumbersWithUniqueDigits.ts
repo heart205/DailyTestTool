@@ -14,11 +14,11 @@ function countNumbersWithUniqueDigits(n: number): number {
     let total = 1
     let isFirstCount = true
     while (num-- > 0) {
-      if(isFirstCount) {
+      if (isFirstCount) {
         // 第一位数 1-9
         total *= 9
-        isFirstCount = false 
-      }else {
+        isFirstCount = false
+      } else {
         total *= j
       }
       j--

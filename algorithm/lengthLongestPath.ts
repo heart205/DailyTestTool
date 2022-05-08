@@ -5,8 +5,8 @@
  *
  */
 
-function lengthLongestPath(input: string): number {
-  let ans: number
+export function lengthLongestPath(input: string): number {
+  const ans: number = input.length
 
   return ans
 }
