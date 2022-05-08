@@ -1,5 +1,1 @@
-# typescript learn
-
-- generics
-
-- DailyTestTool
+# typescript template tools
